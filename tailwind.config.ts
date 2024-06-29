@@ -12,6 +12,6 @@ export default {
 		daisyui
 	],
 	daisyui: {
-		themes: ["light", "dark", "cupcake"],
+		themes: ["light", "dark", "cupcake", "cyberpunk", 'black', 'wireframe', 'lofi'],
 	},
 } as Config;

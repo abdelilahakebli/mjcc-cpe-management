@@ -1,17 +1,13 @@
 <script lang="ts">
-    // import {login} from '$lib/pocketbase'
-    // let username = ""
-    // let password = ""
-
-    // const handlesubmit = async (event: Event) => {
-    //     event.preventDefault();
-    //     await login(username, password)
-    // }
-
+    import {ThemeController} from '$lib/components/ui'
 </script>
+
+
 
 <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 bg-base-100 h-screen">
     <div class="bg-base-500 col-span-3 xl:col-span-1  flex flex-col">
+      <ThemeController/>
+
         <div class="w-96 m-auto">
             <form class="card-body" action="?/login" method="post">
                 <div class="form-control">

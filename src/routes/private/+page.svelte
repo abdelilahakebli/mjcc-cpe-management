@@ -1,14 +1,27 @@
 <script lang="ts">
 
-    export let data;
-    
+	import type { PageData } from './$types';
+    import type {Detainee} from '$lib/types'
+    export let data: PageData;
+    let {detainees} = data;
+    import {Table, DetaineeCard} from '$lib/components/ui'
+
 </script>
 
-<p class="text-lg"> Welcome back {data?.user?.username} </p>
 
+<div class="grid grid-cols-3 p-8">
+    <div class="col-span-2">
+        <div class="flex flex-row">
+            <h3 class="flex-1">Table</h3>
 
-<form action="/auth/logout" method="POST">
-    <button class="btn btn-primary">
-        Logout
-    </button>
-</form>
+            <button class="btn btn-link">Ajouter</button>
+        </div>
+        {#if detainees != undefined}
+            <Table  detainees={detainees}/>
+        {/if}
+    </div>
+
+    <div class="col-span-1">
+        <!-- <DetaineeCard /> -->
+    </div>
+</div>
